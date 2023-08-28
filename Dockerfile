@@ -22,6 +22,3 @@ RUN python3 -m pip install --upgrade pip pytest cmake scikit-build setuptools fa
 
 # Install llama-cpp-python (build with cuda)
 RUN CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 python3 -m pip install llama-cpp-python --force-reinstall --upgrade --no-cache-dir
-
-RUN CMAKE_ARGS="CT_CUBLAS=1" CT_CUBLAS=1 python3 -m pip install ctransformers --no-binary ctransformers
-
